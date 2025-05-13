@@ -1,3 +1,10 @@
+/* Reset some default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Style the header */
 header.header {
     background-color: #4CAF50;
@@ -11,10 +18,11 @@ header.header {
     list-style-type: none;
     padding: 0;
     background-color: #333;
+    display: flex;
+    justify-content: center;
 }
 
 #main-nav ul li {
-    display: inline;
     margin: 0 1em;
 }
 
@@ -22,16 +30,30 @@ header.header {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 0.5em 1em;
+}
+
+#main-nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Container for main content and sidebar */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2em auto;
+    gap: 20px;
 }
 
 /* Style the content section */
 .content {
+    flex: 3;
     font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 2em auto;
     padding: 1em;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
 .content h2 {
@@ -49,6 +71,25 @@ header.header {
     border: 2px solid #ddd;
     border-radius: 5px;
     margin-top: 1em;
+}
+
+/* Style the sidebar */
+.sidebar {
+    flex: 1;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+}
+
+.sidebar h3 {
+    color: #444;
+}
+
+.sidebar p {
+    line-height: 1.6;
+    color: #777;
 }
 
 /* Style the footer */
